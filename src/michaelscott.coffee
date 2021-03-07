@@ -39,7 +39,8 @@ module.exports = (robot) ->
     res.send "I. DECLARE. BANKRUPTCY!!"
 
   robot.hear /large|huge|giant|all night|enormous|vast|immense|large|big|great|massive|colossal|prodigious|gigantic|gargantuan|mammoth|monumental|giant|towering|elephantine|mountainous|monstrous|titanic|epic|Herculean|jumbo|mega|monster|king-size|economy-size|oversize|super-size|whopping|humongous/i, (res) ->
-    res.send "That's what she said"
+    if Math.floor((Math.random() * 10) + 1) == 10
+      res.send "That's what she said"
 
   robot.respond /inspire me michaelscott/i, (res) ->
     res.reply res.random quotes
